@@ -72,10 +72,11 @@ ol {
     flex-direction: column;
     gap: 5px;
     border: none;
+
 }
 
 .search-form__fieldset-title {
-    font-family: "Fira Sans Condensed";
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -113,6 +114,18 @@ ol {
     inline-size: 225px;
     appearance: none;
 }
+.search-form__textfield:active {
+    outline: 1px solid #FFF;
+  }
+  .search-form__textfield:focus {
+    outline: none;
+  }
+  .search-form__textfield:focus-visible {
+    outline: none;
+  }
+.search-form__label-text {
+    cursor: pointer;   
+}
 .search-form__checkbox-list {
     display: flex;
     gap: 15px;
@@ -123,8 +136,8 @@ ol {
     height: 19px;
     border: 1px solid #ffffff;
     float: left;
-    margin-right: 5px;
     cursor: pointer;
+    margin: 1.5px 5px 1.5px 0px;
 }
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
     content: "";
@@ -173,6 +186,9 @@ ol {
     line-height: 100%;
     text-transform: uppercase;
     padding: 2px 0px 6px 2px;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
 }
 
 .content__video-card {
@@ -180,19 +196,21 @@ ol {
     justify-content: space-between;
 }
 .content__video-card-thumbnail {
-    width: 194px;
-    height: 103px;
+    width: 192px;
     object-fit: cover;
     object-position: center;
 }
 .content__video-card-description {
     padding-left: 2px;
     padding-bottom: 4px;
-    font-family: "Fira Sans", "Condensed";
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 16.2px;
     text-align: left;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
 }
 .content__video-card-description-container {
     inline-size: 100%;
@@ -226,6 +244,9 @@ ol {
 }
 .content__list-item:hover {
     text-decoration: underline 1px #fff;
+}
+.content__list-item:active {
+    background-color: #545050; 
 }
 
 .button {
@@ -262,8 +283,8 @@ ol {
     align-items: center;
     gap: 10px;
     width: 194px;
-    height: 34px;
     margin-top: 20px;
+    padding:  5px;
 }
 .content__card-link_current:active {
     background-color: #545050;
